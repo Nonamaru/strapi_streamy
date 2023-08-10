@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "libraries",
+  "info": {
+    "singularName": "library",
+    "pluralName": "libraries",
+    "displayName": "library",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "videos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "upload": {
+      "type": "date"
+    },
+    "folder": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "libraries"
+    }
+  }
+}
